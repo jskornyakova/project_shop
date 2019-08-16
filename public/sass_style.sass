@@ -1,0 +1,1165 @@
+* 
+    margin: 0
+    padding: 0
+
+html
+    height: 100%
+
+@import "vars"
+
+a 
+    text-decoration: none
+
+body 
+    font-family: 'Lato', sans-serif
+    height: 100%
+
+.wrapper
+    min-height: 100% 
+    display: flex
+    flex-direction: column
+
+.top
+    flex-grow: 1
+
+.container 
+    width: 1140px
+    margin: 0 auto
+
+.pink 
+    color: $pink
+
+.header 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
+    border-bottom: 1px solid #ececec
+    background-color: $white
+    height: 100px
+    &-flex 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+    &__left 
+        display: flex
+        align-items: center
+    &__right 
+        display: flex
+        align-items: center
+        &_account
+            width: 155px
+        &_account a
+            height: 38px
+            padding-top: 10px
+            padding-bottom: 10px
+            line-height: 38px
+        &_account i
+            padding-left: 10px
+
+        &_cart
+            position: relative
+            z-index: 9999
+            &-btn
+                margin-right: 26px
+                border: none
+                background: none
+
+    &-text 
+        height: 38px
+        width: 276px
+        border-radius: 0 3px 3px 0
+        border: 1px solid #e6e6e6
+        background-color: $white
+        text-indent: 16px
+        padding-right: 16px
+
+.header__form 
+    display: flex
+    align-items: center
+    margin-left: 37px
+    position: relative
+    & button 
+        height: 40px
+        border-radius: 0 3px 3px 0
+        border: 1px solid #e6e6e6
+        background-color: $white
+    & img 
+        width: 14px
+        height: 14px
+        margin-left: 12px
+        margin-right: 12px
+    &:hover .drop-browse 
+        display: block
+        z-index: 9999
+
+.browse 
+    width: 87px
+    height: 38px
+    color: $dark_grey
+    border-radius: 3px 0 0 3px
+    border: 1px solid #e6e6e6
+    background-color: #cdcdcc
+    background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
+    text-align: center
+    line-height: 38px
+
+.drop-browse 
+    padding: 20px
+    border: 1px solid #e8e8e8
+    position: absolute
+    top: 36px
+    background-color: $white
+    display: none
+
+.logo 
+    display: flex
+    align-items: center
+    color: $dark_grey
+    font-size: 27px
+    font-weight: 300
+    letter-spacing: 0.68px
+    text-decoration-line: none
+    & img 
+        margin-right: 13px
+
+
+.button 
+    color: $white
+    font-size: 15px
+    font-weight: 400
+    background-color: $pink
+    letter-spacing: 0.38px
+    height: 38px
+    padding-left: 19px
+    padding-right: 19px
+    line-height: 38px
+    border: 1px solid $pink
+    text-align: center
+    &:hover 
+        color: $pink
+        background-color: $white
+        border: 1px solid $pink
+
+.drop-cart 
+    padding: 20px
+    border: 1px solid #e8e8e8
+    border-radius: 5px
+    top: 50px
+    background-color: $white
+    position: absolute
+    left: -14px
+    &-p
+        margin-top: 10px
+        margin-bottom: 10px
+    &::after 
+        content: ""
+        width: 12px
+        height: 12px
+        border-top: 1px solid #e8e8e8
+        border-left: 1px solid #e8e8e8
+        top: -7px
+        left: 25px
+        position: absolute
+        transform: rotate(45deg)
+        background-color: $white
+
+.star-cart
+    display: flex
+    justify-content: space-between
+    margin-top: 5px
+
+.h1-cart 
+    font-size: 16px
+    color: $dark_grey
+    font-weight: 700
+    text-transform: uppercase
+    display: flex
+    justify-content: space-between
+
+.h2-cart 
+    color: $dark_grey
+    font-family: Lato
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+    padding-top: 10px
+    padding-bottom: 10px
+    & span 
+        font-size: 12px
+        font-weight: 400
+        text-transform: uppercase
+
+
+.drop_product_cart
+    width: 235px
+    margin-right: 15px
+    clear: both
+    margin-bottom: 33px
+    padding-bottom: 33px
+    border-bottom: 2px solid #ededed
+
+.button_cart 
+    border: 1px solid #eaeaea
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    background-color: $white
+    text-align: center
+    &:hover 
+        border: 1px solid $pink
+    & a 
+        color: #4a4a4a
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+
+    &:hover a 
+        color: $pink
+    
+
+.menu 
+    display: flex
+    list-style-type: none
+    justify-content: center
+    background-color: $white
+    &__link 
+        color: $dark_grey
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        text-decoration: none
+        padding: 20px
+        display: block
+        border-bottom: 2px solid transparent
+        &:hover 
+            border-bottom: 2px solid $pink
+    &__list 
+        position: relative
+        &:hover .drop 
+            display: flex
+        
+
+.drop 
+    padding: 20px
+    border: 1px solid #e8e8e8
+    position: absolute
+    display: none
+    background-color: $white
+    top: 48px
+    left: -7px
+    &::before 
+        content: ""
+        width: 12px
+        height: 12px
+        border-top: 1px solid #e8e8e8
+        border-left: 1px solid #e8e8e8
+        top: -7px
+        left: 45px
+        position: absolute
+        transform: rotate(45deg)
+        background-color: $white
+    &-flex 
+        width: 235px
+        margin-right: 46px
+        &:last-of-type 
+            margin-right: 0
+    &-h3 
+        color: #232323
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.35px
+        padding-bottom: 8px
+        margin-bottom: 16px
+        border-bottom: 1px solid #e8e8e8
+    &-menu 
+        list-style: none
+        & li 
+            padding-bottom: 16px
+    &-link 
+        color: #646464
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: 0.35px
+        &:hover 
+            color: $pink
+
+.drop-last 
+    left: auto
+    right: -50px
+    &::before 
+        left: auto
+        right: 95px
+    
+.drop-sale 
+    margin-left: -17px
+    background-image: url(img/supper_sale.jpg)
+    margin-top: 22px
+    &-h1 
+        color: $white
+        font-size: 22px
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 0.55px
+        padding: 60px 10px 10px 170px
+
+.promo 
+    height: 613px
+    background-color: #e8e8e8
+    &-content 
+        background-image: url(img/brand_back.jpg)
+        height: 100%
+        background-position: 0 -51px
+    &__content 
+        margin-top: 223px
+        float: left
+        border-left: 12px solid $pink
+        padding-left: 12px
+    &__big 
+        color: $dark_grey
+        font-size: 60px
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 45px
+        margin-bottom: 15px
+    &__mini 
+        color: $dark_grey
+        font-size: 40px
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 31px
+
+.promo2 
+    margin-top: 98px
+    display: flex
+    margin-bottom: 100px
+    &-content 
+        display: flex
+    &-left 
+        margin-right: 20px
+    &-text 
+        position: absolute
+        color: $dark_grey
+        font-size: 18px
+        font-weight: 900
+        margin-top: 26px
+        padding: 16px 20px
+        letter-spacing: 0.45px
+        background-color: $white
+        & span 
+            font-size: 30px
+            letter-spacing: 0.75px
+
+    .hot-deal 
+        margin-bottom: 20px
+        width: 560px
+        height: 542px
+        background-image: url(img/hot-deal.jpg)
+
+    .trendy 
+        position: relative
+        width: 560px
+        height: 261px
+        background-color: #dadad2
+        background-image: url(img/trendy.png)
+        background-repeat: no-repeat
+        background-position: right -21px
+
+    .offer 
+        margin-bottom: 20px
+        width: 560px
+        height: 261px
+        background-image: url(img/offer.jpg)
+
+
+    .new-arrivals 
+        width: 560px
+        height: 542px
+        background-image: url(img/new-arrivals.jpg)
+
+.product-box 
+    padding-top: 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    & .button 
+        width: 212px
+        text-align: center
+        margin-left: 464px
+        margin-top: 40px
+        margin-bottom: 113px
+
+    .product 
+        width: 261px
+        position: relative
+        margin-bottom: 39px
+        transition: transform 1s
+        &:hover 
+            transform: scale(1.05)
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+        &:hover .product__img 
+            filter: brightness(40%)
+        &:hover .product__add 
+            visibility: visible
+        &-h 
+            display: inline-block
+            width: 100%
+            margin-bottom: 60px
+            & h2 
+                color: $dark_grey
+                font-size: 30px
+                font-weight: 700
+                letter-spacing: 0.75px
+                margin-top: 0
+                padding-top: 0
+                margin-bottom: 16px
+                text-align: center
+            & h5 
+                color: #9f9f9f
+                font-size: 14px
+                font-weight: 400
+                letter-spacing: 0.35px
+                text-align: center 
+        &__link 
+            display: block
+            color: $dark_grey
+            font-size: 13px
+            font-weight: 400
+            text-transform: uppercase
+            margin-bottom: 15px
+        &__price 
+            color: $pink
+            font-size: 16px
+            font-weight: 700
+            text-transform: uppercase
+        &__text 
+            padding: 20px 14px
+        &__add 
+            width: 123px
+            height: 39px
+            border: 1px solid $white
+            color: $white
+            font-size: 13px
+            font-weight: 700
+            position: absolute
+            display: flex
+            visibility: hidden
+            justify-content: center
+            align-items: center
+            left: 70px
+            top: 98px
+            &:hover 
+                box-shadow: 0 0 5px #fff
+        
+.offer2 
+    background-color: #222224
+    background-image: url(img/offer2.jpg)
+    background-repeat: no-repeat
+    color: #fbfbfb
+    font-size: 14px
+    font-weight: 300
+    display: flex
+    margin-bottom: 97px
+    &-h 
+        margin-left: 39px
+        color: $white
+    & h1 
+        font-size: 52px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1.5px
+        padding-top: 146px
+    & h3 
+        font-size: 32px
+        letter-spacing: 0.9px
+    & h4 
+        font-size: 20px
+        font-weight: 700
+        letter-spacing: 0.5px
+        padding-bottom: 17px
+        padding-top: 7px
+
+    .promo-text2 
+        width: 373px
+        margin-left: 435px
+        margin-top: 55px
+        & img 
+            padding-left: 36px
+            padding-right: 34px
+            float: left
+        & p 
+            width: 219px
+            clear: both
+            padding-left: 111px
+            margin-bottom: 62px
+
+.comment 
+    height: 100%
+    background: url(img/footer.jpg) 100% 100%
+    background-size: cover
+    filter: opacity(80%)
+    font-size: 12px
+    font-weight: 300
+    letter-spacing: 0.3px
+    color: #222224
+    margin-bottom: 109px
+
+    &-flex 
+        display: flex
+        padding-bottom: 164px
+    
+    &-left 
+        width: 570px
+        opacity: inherit
+        & img 
+            padding-top: 111px
+            float: left
+            padding-right: 28px
+            
+        & h6 
+            padding-left: 111px
+                        
+        & p 
+            width: 386px
+            padding-top: 123px
+            padding-left: 111px
+            font-size: 16px
+            font-style: italic
+            letter-spacing: 0.4px
+            margin-bottom: 19px
+            
+        & span 
+            font-size: 16px
+            font-weight: 700
+            letter-spacing: 0.4px
+
+    &-right
+        width: 570px         
+    &-right h2 
+        padding-top: 148px
+        padding-left: 147px
+        width: 277px
+        color: #222224
+        font-weight: 400
+        font-size: 24px
+        letter-spacing: 0.6px
+        text-align: center
+        text-transform: uppercase
+    &-right h3 
+        padding-left: 147px
+        font-size: 14px
+        letter-spacing: 0.35px
+
+
+    &-form 
+        margin-top: 35px
+        padding-left: 92px
+
+
+    &-text 
+        width: 266px
+        height: 46px
+        border-radius: 23px 0 0 23px
+        background-color: #e1e1e1
+        text-indent: 16px
+        border: 1px solid #e6e6e6
+        border-width: 0
+        position: absolute
+        padding-right: 16px
+
+    &-button 
+        width: 104px
+        height: 46px
+        border-radius: 0 23px 23px 0
+        background-color: $pink
+        border: 1px solid #e6e6e6
+        border-width: 0
+        position: relative
+        left: 282px
+
+.footer-flex 
+        display: flex
+        margin-bottom: 90px
+
+.footer-copy 
+    height: 79px
+    background-color: #e6e6e6
+    display: flex
+    justify-content: space-between
+    & p 
+        padding-top: 33px
+        padding-bottom: 32px
+        color: #7a7a7a
+        font-size: 16px
+        font-weight: 400    
+.footer-menu 
+    display: flex
+    width: 609px
+    padding-left: 63px
+    justify-content: space-between
+
+.info 
+    margin-top: 14px
+    &-ul 
+        margin-top: 40px
+    &-list 
+        text-decoration: none
+        list-style-type: none
+        padding-bottom: 15px
+        color: #898989
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 0.4px
+        & span 
+            font-weight: 700
+            font-size: 18px
+        &:hover 
+            color: $pink
+        
+.description 
+    width: 427px
+    line-height: 1.5
+    color: #898989
+    font-size: 14px
+    font-weight: 300
+    
+    & a 
+        margin-bottom: 29px
+    & p
+        margin-bottom: 5px
+
+.networks 
+    width: 32px
+    height: 32px
+    background-color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 8px
+    &:hover 
+        background-color: $pink
+    & i 
+        color: #b2b2b2
+    &:hover i 
+        color: #f7f7f8
+    &-box 
+        padding-top: 24px
+        display: flex
+
+
+.menu-page 
+    height: 148px
+    background-color: #f8f3f4
+    text-transform: uppercase
+    .nav-page-box 
+        padding-top: 65px
+        color: $pink
+        display: flex
+        justify-content: space-between
+        & a 
+            padding-top: 4px
+            font-size: 14px
+            font-weight: 300
+            color: #636363
+            &:hover
+                color: $pink
+        & h1 
+            color: $pink
+            font-size: 24px
+            font-weight: 700
+            
+    
+.product-image 
+    height: 777px
+    border: 1px solid #eaeaea
+    background-color: #f7f7f7
+
+
+.product__image 
+    text-align: center
+    padding-top: 11px
+
+.collection 
+    text-align: center
+    border: 1px solid #eaeaea
+    background-color: $white
+    color: #5e5e5e
+    font-size: 24px
+    padding-top: 73px
+    position: relative
+    top: -83px
+    &-h2 
+        color: #4d4d4d
+        font-size: 36px
+        font-weight: 800
+        text-transform: uppercase
+        margin-top: 17px
+        padding-top: 17px
+        margin-bottom: 67px
+        text-align: center
+
+    &-h3 a 
+        color: $pink
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 34px
+
+    &-h4 
+        display: inline
+        color: #b9b9b9
+        font-size: 14px
+        font-weight: 700
+        line-height: 24px
+        margin-left: 44px
+        & span 
+            color: #2f2f2f
+
+    &-p 
+        margin-right: 262px
+        margin-left: 262px
+        margin-bottom: 28px
+        color: #5e5e5e
+        font-size: 14px
+        text-align: justify
+        line-height: 24px
+
+.price 
+    font-size: 24px
+    font-weight: 700
+    line-height: 24px
+    text-align: center
+    margin: 37px 250px 63px 250px
+    padding-bottom: 43px
+    border-bottom: 1px solid #eaeaea
+
+.select-choose 
+    margin-left: 90px
+    display: inline-flex
+
+.select-h4 
+    color: #2f2f2f
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+    width: 144px
+    margin-right: 90px
+    text-align: left
+    & h4 
+        margin-bottom: 16px
+    & select 
+        width: 144px
+        padding: 12px 11px
+
+.add 
+    font-size: 16px
+    font-weight: 700
+    padding-bottom: 21px
+    color: #5e5e5e
+    &:hover 
+        color: #ef5b70
+    & i 
+        font-size: 26px
+        padding-right: 16px
+        color: #2f2f2f
+    &:hover i 
+        color: #ef5b70
+    &-cart 
+        margin: 28px 262px 122px 262px
+        border: 1px solid #5e5e5e
+        background-color: $white
+        padding: 16px
+        &:hover 
+            border: 1px solid #ef5b70
+            color: #ef5b70
+
+.img-cart 
+    float: left
+    margin-right: 15px
+
+.d-table
+    display: table
+    width: 100%
+    border: none
+    padding-top: 90px
+
+    .d-tr
+        display: table-row
+        
+
+    .d-td
+        display: table-cell
+        text-align: center
+        border-bottom: 1px solid #ccc
+        vertical-align: middle
+        text-transform: uppercase
+        padding: 22px
+        & input
+            text-align: center
+            padding: 5px 10px
+            width: 34px
+        & h2
+            text-align: left
+            margin-top: 13px
+            border-right-width: 150px
+            margin-right: 50px
+            width: 350px
+        & p
+            margin-top: 38px
+            font-size: 13px
+            font-weight: 300
+            line-height: 20px
+            text-align: left
+            
+        & a
+            font-size: 13px
+            font-weight: 700
+            line-height: 20px
+            text-transform: uppercase
+            letter-spacing: -0.2px
+            color: $dark_grey
+            
+        & img
+            padding: 22px
+            float: left
+
+.d-tr-last
+    padding: 44px
+    display: flex
+    justify-content: space-between
+
+.button_cart
+    border: 1px solid #eaeaea
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 20px 38px
+    &:hover
+        color: $pink
+        border: 1px solid $pink
+
+.form-proceed
+    display: flex
+    justify-content: space-between
+    padding-top: 63px
+    padding-bottom: 80px
+    &-h2
+        color: $dark_grey
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 22px
+        & span
+            margin-left: 5px
+    &-p  
+        color: #000000
+        font-size: 14px
+        font-weight: 300
+        margin-bottom: 24px
+        & span
+            margin-left: 5px
+    &-button
+        padding: 12px 18px
+        color: #4a4a4a
+        font-size: 11px
+        font-weight: 700
+        text-transform: uppercase
+        border: 1px solid #eaeaea
+        width: 100px
+        text-align: center
+        &:hover
+            color: $pink
+            border: 1px solid $pink
+    .adress
+        flex-wrap: wrap
+        width: 355px
+        &-text
+            border: 1px solid #eaeaea
+            padding: 16px
+            width: 323px
+            margin-bottom: 22px
+        &-country
+            width: 355px
+            padding: 16px
+            border: 1px solid #eaeaea
+            color: #b1b1b1
+            margin-bottom: 22px
+    .grand-total
+        width: 272px
+        height: 174px
+        background: #f5f3f3
+        padding: 40px 44px 0 44px
+        text-align: right
+        text-transform: uppercase
+        &-button
+            color: $white
+            font-size: 16px
+            font-weight: 700
+            text-transform: uppercase
+            &:hover
+                color: $pink
+
+.checkout
+    &_right_h3_radio
+        margin-bottom: 33px
+    &_right_h3_radio li
+        color: $dark_grey
+        font-size: 16px
+        font-weight: 400
+        text-transform: uppercase
+        list-style-type: none
+    &_box
+        display: none
+        justify-content: space-between
+        padding-top: 35px
+        font-weight: 400
+        color: #b3b2b2
+        font-size: 13px
+        line-height: 20px
+        &_left_p
+            color: $dark_grey
+            font-size: 14px
+            font-weight: 400
+            line-height: 14px
+            padding-top: 15px
+            padding-left: 212px
+        &_right_ul
+            padding-bottom: 39px
+            & li
+                list-style-type: none
+                color: #b3b2b2
+                font-size: 13px
+                line-height: 20px
+        & h2
+            color: $dark_grey
+            font-size: 16px
+            font-weight: 700
+            text-transform: uppercase
+            padding-bottom: 15px
+        & h3
+            color: $dark_grey
+            font-size: 12px
+            line-height: 12px
+            text-transform: uppercase
+            & span
+                color: red
+        & p
+            padding-bottom: 27px
+            & span
+                color: red
+    &_list
+        list-style-type: decimal-leading-zero
+        padding-bottom: 33px
+        border-bottom: 1px solid #e8e8e8
+        margin: 33px
+        &_Btn
+            color: $dark_grey
+            font-size: 16px
+            font-weight: 700
+            text-transform: uppercase
+        & input[type="checkbox"]
+            display: none
+            &:checked ~ .checkout_box
+                display: flex
+
+    &_text
+        width: 360px
+        height: 35px
+        padding: 5px 15px
+        border: 1px solid #eaeaea
+        background-color: $white
+        margin-top: 15px
+        margin-bottom: 15px
+    &_button
+        border: 1px solid #eaeaea
+        background-color: $white
+        color: #4a4a4a
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        width: 180px
+        height: 50px
+        padding-top: 10px
+        padding-bottom: 10px
+        margin-bottom: 47px
+        float: left
+        line-height: 14px
+        &:hover
+          border: 1px solid $pink 
+
+.product-choose
+    display: flex
+    padding-top: 70px
+    padding-bottom: 110px
+    & .button_view a
+        padding: 15px 45px
+
+    &-nav_menu
+        display: flex
+        flex-direction: column
+        width: 243px
+
+    &-drop
+        display: none
+        & .drop-menu
+            margin-top: 37px
+            margin-left: 20px
+    &-size.select-h4
+        width: auto
+    &-size p
+        display: inline
+        padding-right: 10px
+
+    &-size input[type="checkbox"]
+        border: 1px solid #ebebeb
+        background-color: $white
+
+    &-nav_list
+        list-style-type: none
+        margin: 20px 20px 18px 0
+        padding-bottom: 12px
+        border-bottom: 1px solid #e8e8e8
+        &_Btn
+            color: #6f6e6e
+            font-size: 14px
+            font-weight: 700
+            line-height: 14px
+            text-transform: uppercase
+            border-left: 5px solid $pink
+            padding: 13px 13px 13px 13px
+            & i
+                float: right
+        & input[type="checkbox"]
+            display: none
+            &:checked ~ .product-choose-drop
+                display: flex
+    & .filter__slider
+        text-align: center
+        &_price
+            display: flex
+            justify-content: space-between
+    
+    &-trend .select-h4
+        padding-bottom: 16px
+
+    &-trend-link a
+        font-size: 14px
+        font-weight: 400
+        line-height: 26px
+        color: #6f6e6e
+        padding-right: 5px
+        &:hover
+            color: $pink
+
+    &-sort
+        margin-top: 43px
+        background-color: #f3f3f3
+        display: flex
+        justify-content: flex-start
+        flex-direction: row
+        width: 100%
+        .select-sort
+            padding: 12px 11px
+            border: 1px solid #ebebeb
+            background-color: $white
+            font-size: 14px
+            color: #6f6e6e
+            font-weight: 400
+            margin: 10px 10px
+            & select
+                padding-left: 20px 
+                border: none
+                outline: none
+                font-size: 14px
+                color: #6f6e6e
+                font-weight: 400
+    .choose2
+        padding-left: 50px          
+    .header_choose2
+        display: flex 
+        justify-content: space-between               
+
+    .filter-range 
+        width: 262px
+        text-transform: uppercase
+        &-title
+            margin-bottom: 16px
+
+    .range-controls 
+        position: relative
+        margin-bottom: 20px
+
+    .range-controls .scale 
+        height: 3px
+        background: #f0f0f0
+
+    .range-controls .bar 
+        height: 3px
+        width: 80%
+        background: $pink
+
+    .range-toggle
+        position: absolute
+        top: -5px
+        width: 14px
+        height: 14px
+        background: #f0f0f0
+        border-radius: 50%
+    
+    .range-toggle:hover 
+        background: $pink
+
+    .range-toggle-min 
+        left: 0
+
+    .range-toggle-max 
+        left: 80%    
+
+    .range_price
+        display: flex
+        justify-content: space-between
+
+    .nav_page
+        display: flex
+        justify-content: space-between
+        & .button_view
+            padding-top: 15px
+            & a
+                color: $white
+                padding-left: 45px
+        & .page
+            border: 1px solid #ebebeb
+            background-color: #ffffff
+            padding: 15px 39px
+        & a
+            color: #c4c4c4
+            font-size: 16px
+            font-weight: bold
+            line-height: 16px
+            padding-left: 7px
+            &:hover
+                color: $pink
+
+.footer_offer2
+    display: flex
+    justify-content: space-between
+    &_flex
+        background-color: #222224
+        color: #fbfbfb
+        text-align: center
+        padding-top: 90px
+        padding-bottom: 114px
+    & img
+        padding-bottom: 32px
+    & h4
+        font-size: 20px
+        font-weight: 700
+        letter-spacing: 0.5px
+        padding-bottom: 17px
+    & p
+        width: 308px
+        font-size: 13.5px
+        font-weight: 300
+        letter-spacing: 0.35px
+        text-align: justify
+        line-height: 23.95px

@@ -1,0 +1,92 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/mango1.jpeg",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 2,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/product2.jpg",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 3,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/product3.jpg",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 4,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/product4.png",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 5,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/mango5.jpeg",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 6,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/product6.png",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 7,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/mango7.jpeg",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 8,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/mango8.jpeg",
+    "imgCart": "img/product_cart.jpg"
+  },
+  {
+    "id_product": 9,
+    "product_name": "Mango people t-shirt",
+    "price": 150,
+    "color": "red",
+    "size": "XLL",
+    "shipping": "free",
+    "img": "img/product9.png",
+    "imgCart": "img/product_cart.jpg"
+  }
+]
